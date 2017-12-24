@@ -1,7 +1,7 @@
 {
-  "name": "new_template",
-  "version": "1.0.0",
-  "description": "Vue(pug,coffee,stylus)-Express-Webpack project",
+  "name": "Multi Chess Clock",
+  "version": "0.0.1",
+  "description": "The Chess Clock for Multi Players",
   "author": "Takashi Matsumoto <t.matsu.j@gmail.com>",
   "private": true,
   "scripts": {
