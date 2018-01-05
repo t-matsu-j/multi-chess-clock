@@ -1,4 +1,6 @@
 'use strict'
+
+// TODO: express関連のwebpack化
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'

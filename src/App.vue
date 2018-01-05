@@ -1,20 +1,20 @@
 <template lang='pug'>
 #app
-  img(src="./assets/logo.png")
-  HelloWorld
+  Game
 </template>
 <script lang='coffee'>
 import HelloWorld from './components/HelloWorld'
-
+import Game from './components/Game'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Game
   }
 }
 </script>
-
 <style lang='stylus'>
+body
+  background-color: #EEE
 #app
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
