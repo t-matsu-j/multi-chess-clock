@@ -8,16 +8,16 @@
 <script lang="coffee">
 import Player from './Player'
 import ClockInput from './ClockInput'
-# TODO:0 # 新規作成ボタンを作成
+# TODO:20 # 新規作成ボタンを作成
 # ### createNewGameRoom:
 #   - [ ] socketioでルーム作成して自身をプレイヤーとして追加
 #   - [ ] サーバサイドの設計も必要
-# TODO:20 # ゲームに参加ボタンを作成
+# TODO:60 # ゲームに参加ボタンを作成
 # ### joinGame:
 #   - [ ] すでにあるゲームに参加する
 #   - [ ] プライベートなゲームにはid指定で参加
 #   - [ ] パブリックなゲームには一覧から選択して参加
-# TODO:10 # プレイヤー追加ボタンを作成
+# TODO:50 # プレイヤー追加ボタンを作成
 # ### addPlayer:
 #   - サーバーに emit("addPlayerEvent")を送信
 #   - サーバーの on("addPlayerEvent")でプレイヤー追加してemit("addPlayerEvent")

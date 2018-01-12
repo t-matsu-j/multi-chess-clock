@@ -1,6 +1,6 @@
 {
   "exclude": [
-    "^(node_modules|bower_components|\\.imdone|target|build|dist|logs|flow-typed)[\\/\\\\]?|\\.(git|svn|hg|npmignore)|\\~$|\\.(jpg|png|gif|swp|ttf|otf)$"
+    "^(node_modules|bower_components|\\.imdone|target|dist|logs|flow-typed)[\\/\\\\]?|\\.(git|svn|hg|npmignore)|\\~$|\\.(jpg|png|gif|swp|ttf|otf)$"
   ],
   "watcher": true,
   "keepEmptyPriority": false,
@@ -20,7 +20,8 @@
       "REVIEW",
       "TODO",
       "LISTLIST",
-      "DOING"
+      "DOING",
+      "DONE"
     ]
   },
   "lists": [
@@ -30,6 +31,10 @@
     },
     {
       "name": "DOING",
+      "hidden": false
+    },
+    {
+      "name": "DONE",
       "hidden": false
     }
   ],

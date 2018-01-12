@@ -46,7 +46,7 @@ export default {
       @remainTime = @setTime
 
   watch:
-    # DOING:20 設計精査
+    # DOING:10 設計精査
     setTime: ->
       @remainTime = @setTime unless @counting
   computed:

@@ -2,7 +2,7 @@
 #login
 </template>
 <script lang="coffee">
-# TODO: ログイン機能の実装
+# TODO:40 ログイン機能の実装
 # - [ ] ユーザ管理
 export default {
   name: "Login"
