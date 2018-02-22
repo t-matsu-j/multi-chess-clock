@@ -25,7 +25,11 @@ clientConfig =
   output:
     path: config.build.assetsRoot
     filename: '[name].js'
-    publicPath: if process.env.NODE_ENV is 'production' then config.build.assetsPublicPath else config.dev.assetsPublicPath
+    publicPath:
+      if process.env.NODE_ENV is 'production'
+        config.build.assetsPublicPath
+      else
+        config.dev.assetsPublicPath
   resolve:
     extensions: ['.js', '.vue', '.json']
     alias:
@@ -81,11 +85,13 @@ serverConfig =
   entry:
     io: './src/server/io.coffee'
   resolve:
-    modules: [path.resolve(__dirname, '../src/server')]
+    modules: ['node_modules', path.resolve(__dirname, '../src/server'),
+      path.resolve(__dirname, '../src/server/socketio-events')]
     extensions: [".coffee", ".js"]
   externals: [
     "socket.io": "socket.io"
-    "require-dir": "require-dir"
+#    "require-dir": "require-dir"
+    "redis": "redis"
   ]
   output:
     path: config.build.assetsRoot

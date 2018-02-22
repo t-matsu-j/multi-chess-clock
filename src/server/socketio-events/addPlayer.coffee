@@ -1,6 +1,12 @@
+eventName = 'addPlayer'
+
 module.exports = (socket) ->
-  evename = 'addPlayer'
-  console.log evename
-  socket.on evename, (val) ->
-    console.log 'addPlayer called! val: ' + val
-    socket.emit evename, val
+  redisClient = socket.db
+  console.log "#{eventName}: redis_client.connection_id: #{redisClient.connection_id}"
+
+  socket.on eventName, (value) ->
+    key = value.key
+    val = value.val
+    redisClient.set(key, val, console.log(val))
+
+    socket.emit eventName, val

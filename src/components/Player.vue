@@ -1,6 +1,7 @@
 <template lang="pug">
-#player
-  input(v-model="playerName" placeholder="Input name")
+.player
+  span {{playerID}}
+  input(v-model="playerName" :placeholder="playerID")
   Clock(:setTime="setTime")
 </template>
 <script lang="coffee">
@@ -22,7 +23,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-#player
+.player
   float: left
   margin:auto 0;
   height: 198px

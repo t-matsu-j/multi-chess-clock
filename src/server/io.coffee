@@ -1,13 +1,28 @@
 socketio = require 'socket.io'
-events = require './socketio-events'
-import redis from 'redis'
-client = redis.createClient()
 
-console.log events
+## require all with require.context for webpack dependency
+events = require.context './socketio-events/', false, /\.coffee$/
+
+## share redisClient in server
+rc = require('redis').createClient()
+
+console.log "events.keys: #{events.keys()}"
+debugger
+
 io = (server) ->
-  socketio(server).on 'connect', (socket) ->
-    for own key of events
-      console.log(key)
-      events[key](socket, client)
+  io = socketio(server)
+
+  io.use (socket, next) ->
+    socket['db'] = rc
+    next()
+    return
+
+  io.on 'connect', (socket) ->
+    for key in events.keys()
+      console.log "key: #{key}"
+      events(key)(socket)
+    return
+
+  return
 
 module.exports = io

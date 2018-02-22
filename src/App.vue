@@ -1,18 +1,21 @@
 <template lang='pug'>
 #app
-  Game
+  component(:is="currentComponent")
 </template>
 <script lang='coffee'>
 import HelloWorld from './components/HelloWorld'
 import Game from './components/Game'
 export default {
   name: 'app',
+  data: ->
+    currentComponent: "Game"
   components: {
     Game
   }
 }
 </script>
 <style lang='stylus'>
+@import './assets/reset.styl'
 body
   background-color: #EEE
 #app

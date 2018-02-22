@@ -95,7 +95,7 @@ Promise.resolve()
       console.log('Listening at ' + uri + '\n')
 
     })
-
+debugger
     var io = require('../dist/io.js')
     io(server)
     resolve()
