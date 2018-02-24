@@ -1,4 +1,4 @@
-# new_template
+# Multi Chess Clock
 
 > A Vue.js project
 
@@ -28,3 +28,15 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## CONTRIBUTE
+
+1. Checkout feature-xxx/bugfix-xxx
+2. Add ToDo
+  - Alt+t
+3. Do ToDo
+  - Alt+t
+4. Commit
+5. Pull Request
+6. Merge
